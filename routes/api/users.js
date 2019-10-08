@@ -41,7 +41,7 @@ router.post("/register", (req, res) => {
                 })
             })
         }
-    });  
+    }).catch(err => console.log(err));  
 })
 
 // @route POST api/users/login
@@ -92,8 +92,8 @@ router.post("/login", (req, res) => {
             } else {
                 return res.status(400).json({ passwordincorrect: "Password incorrect"});
             }
-        })
-    });
+        }).catch(err => console.log(err));
+    }).catch(err => console.log(err));
  
 })
 
